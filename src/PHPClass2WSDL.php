@@ -110,6 +110,21 @@ class PHPClass2WSDL
     }
 
     /**
+     * Sets the operational body style
+     *
+     * @param string $use
+     * @param string $encodingStyle
+     * @return PHPClass2WSDL
+     */
+    public function setOperationBodyStyle($use, $encodingStyle)
+    {
+        $this->operationBodyStyle['use'] = $use;
+        $this->operationBodyStyle['encodingStyle'] = $encodingStyle;
+
+        return $this;
+    }
+
+    /**
      * Generate the WSDL DOMDocument.
      *
      * @param boolean $withAnnotation Flag if only the methods with '@soap' annotation should be added.
